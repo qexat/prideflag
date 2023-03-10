@@ -1,9 +1,0 @@
-#!/usr/bin/env fish
-
-set PRIDEFLAG_VENV "$HOME/Projects/prideflag/.venv"
-
-if [ "$VIRTUAL_ENV" != "$PRIDEFLAG_VENV" ]
-	. "$PRIDEFLAG_VENV/bin/activate.fish"
-end
-
-python3 "$PRIDEFLAG_VENV/../src/prideflag" $argv
