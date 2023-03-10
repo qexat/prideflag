@@ -11,54 +11,54 @@ pub mod flag {
             h.insert(
                 "pride",
                 vec![
-                    color::RED,
-                    color::ORANGE,
-                    color::YELLOW,
-                    color::GREEN,
-                    color::INDIGO,
-                    color::VIOLET,
+                    color::PRIDE_RED,
+                    color::PRIDE_ORANGE,
+                    color::PRIDE_YELLOW,
+                    color::PRIDE_GREEN,
+                    color::PRIDE_INDIGO,
+                    color::PRIDE_VIOLET,
                 ],
             );
             h.insert(
                 "lesbian",
                 vec![
-                    color::SINOPIA,
-                    color::ATOMIC_TANGERINE,
+                    color::LESBIAN_SINOPIA,
+                    color::LESBIAN_ATOMIC_TANGERINE,
                     color::WHITE,
-                    color::SUPER_PINK,
-                    color::FLIRT,
+                    color::LESBIAN_SUPER_PINK,
+                    color::LESBIAN_FLIRT,
                 ],
             );
             h.insert(
                 "gay",
                 vec![
-                    color::TEAL,
-                    color::TURQUOISE,
-                    color::MINT,
+                    color::GAY_TEAL,
+                    color::GAY_TURQUOISE,
+                    color::GAY_MINT,
                     color::WHITE,
-                    color::COBALT_BLUE,
-                    color::MAJORELLE_BLUE,
-                    color::PURPLE,
+                    color::GAY_COBALT_BLUE,
+                    color::GAY_MAJORELLE_BLUE,
+                    color::GAY_PURPLE,
                 ],
             );
             h.insert(
                 "bisexual",
                 vec![
-                    color::RUBY,
-                    color::RUBY,
-                    color::MAUVE,
-                    color::BLUE,
-                    color::BLUE,
+                    color::BISEXUAL_RUBY,
+                    color::BISEXUAL_RUBY,
+                    color::BISEXUAL_MAUVE,
+                    color::BISEXUAL_BLUE,
+                    color::BISEXUAL_BLUE,
                 ],
             );
             h.insert(
                 "transgender",
                 vec![
-                    color::MAYA_BLUE,
-                    color::AMARANTH_PINK,
+                    color::TRANS_MAYA_BLUE,
+                    color::TRANS_AMARANTH_PINK,
                     color::WHITE,
-                    color::AMARANTH_PINK,
-                    color::MAYA_BLUE,
+                    color::TRANS_AMARANTH_PINK,
+                    color::TRANS_MAYA_BLUE,
                 ],
             );
             h
