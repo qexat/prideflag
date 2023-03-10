@@ -10,3 +10,11 @@ repos:
       hooks:
           - id: fmt
           - id: cargo-check
+    - repo: local
+      hooks:
+          - id: cargo-fmt
+            name: Rust Formatter
+            description: "A tool for formatting Rust code according to style guidelines."
+            language: rust
+            entry: rustfmt
+            types: [rust]
