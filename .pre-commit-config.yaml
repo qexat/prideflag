@@ -9,7 +9,6 @@ repos:
       rev: v1.0
       hooks:
           - id: fmt
-          - id: cargo-check
     - repo: local
       hooks:
           - id: cargo-fmt
