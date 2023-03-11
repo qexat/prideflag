@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for contributing! It's very appreciated. ♥️  
+Thank you for contributing! It's very appreciated. ♥️
 Please verify that you can check the following boxes.
 
 ## Before opening a PR
@@ -16,7 +16,7 @@ Please verify that you can check the following boxes.
 - [ ] If needed, you wrote the reasons of your change(s) in the PR description
 - [ ] The Rust GHA workflow status passes<sup>3</sup>
 
-<sup>2</sup> The recommended formatting is: `GH-XXX: <title>` with `XXX` being the issue number.  
+<sup>2</sup> The recommended formatting is: `GH-XXX: <title>` with `XXX` being the issue number.
 <sup>3</sup> The pre-commit CI status does not have to pass, but it's better if it does 💕
 
 ### Suggested, but not enforced:
@@ -25,12 +25,12 @@ Please verify that you can check the following boxes.
 
 ## Once the PR is merged
 
-Thank you again~ Your contribution is very valuable.  
+Thank you again~ Your contribution is very valuable.
 You can now delete your branch safely. 😄
 
 ## My PR got closed...
 
-We cherish your willingness to participate to the project!  
+We cherish your willingness to participate to the project!
 Perhaps your PR did not meet the requirements or another path was chosen.
 
 Don't get discouraged! Your future PRs will be looked at in detail and one of them might get merged~
