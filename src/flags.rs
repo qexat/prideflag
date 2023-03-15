@@ -61,6 +61,19 @@ pub mod flag {
                     color::TRANS_MAYA_BLUE,
                 ],
             );
+            h.insert(
+                "non-binary",
+                vec![
+                    color::ENBY_YELLOW,
+                    color::WHITE,
+                    color::ENBY_MAUVE,
+                    color::ENBY_BLACK,
+                ],
+            );
+            h.insert(
+                "asexual",
+                vec![color::BLACK, color::ACE_GREY, color::WHITE, color::PURPLE],
+            );
             h
         };
         pub static ref NAME_ALIASES: HashMap<Vec<&'static str>, &'static str> = {
@@ -70,6 +83,8 @@ pub mod flag {
             h.insert(vec!["g"], "gay");
             h.insert(vec!["b", "bi"], "bisexual");
             h.insert(vec!["t", "trans"], "transgender");
+            h.insert(vec!["nb", "enby", "nonbinary"], "non-binary");
+            h.insert(vec!["a", "ace"], "asexual");
             h
         };
     }
