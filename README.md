@@ -1,37 +1,7 @@
 # Prideflag
 
-Prints a pride flag in the console.
+Prints a LGBTI flag in the console. That's it.
 
-Side project for fun.
+## Docs
 
-## Compile
-
-```
-cargo build --release
-```
-
-## Run
-
-```
-./target/release/prideflag
-```
-
-By default, it prints the rainbow flag, but you can specify another one:
-
-```
-./target/release/prideflag --flag lesbian
-```
-
-## Examples
-
-**Without args**
-
-![Output of the program, run with no args](./images/no_args.png)
-
-**Arg `lesbian`**
-
-![Output of the program, run with `--flag lesbian`](./images/lesbian_full.png)
-
-**Arg `g` (alias for `gay`)**
-
-![Output of the program, run with `--flag gay`](./images/gay_alias.png)
+Documentation and examples can be found [here](./docs/index.md).
