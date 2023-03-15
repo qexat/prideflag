@@ -13,7 +13,7 @@ Here is what you need to know.
 
 ### Adding a flag
 
-It's easy! You simply need to `insert` it in the hashmap of flags, as following:
+It's easy! You simply need to `insert` it in the [hashmap of flags](../src/flags.rs#L9), as following:
 
 ```rs
 ...
@@ -43,7 +43,7 @@ You might need other colors that are currently not present.
 
 **File structure**
 
-The file has two main blobs: the flag-specific colors (which start with `PRIDE_`, `GAY_`, ...) and the HTML colors that are not prefixed.
+The file has two main blobs: the [flag-specific colors](../src/colors.rs#L4) (which start with `PRIDE_`, `GAY_`, ...) and the [HTML colors](../src/colors.rs#L31) that are not prefixed.
 
 > The color you want to add is probably flag-specific, so it should go in the first block.
 
@@ -83,6 +83,8 @@ fn make_flag(flag: Vec<color::RGBColor>) -> String
 
 Note: `color::RGBColor` is an alias of `(u8, u8, u8)` for convenience.
 
+See the [definition](../src/main.rs#L53).
+
 ### `make_band`
 
 Retreives the current terminal size and creates a fitting band of spaces, with a background color generated with [`make_esc`](#make_esc).
@@ -91,6 +93,8 @@ Retreives the current terminal size and creates a fitting band of spaces, with a
 fn make_band(r: u8, g: u8, b: u8) -> String
 ```
 
+See the [definition](../src/main.rs#L48).
+
 ### `make_esc`
 
 Generates the escape sequence based on the color RGB values.
@@ -98,6 +102,8 @@ Generates the escape sequence based on the color RGB values.
 ```rs
 fn make_esc(r: u8, g: u8, b: u8) -> String
 ```
+
+See the [definition](../src/main.rs#L44).
 
 ### `get_flag`
 
@@ -108,3 +114,5 @@ If the flag name or alias does not exist, returns `None`.
 ```rs
 fn get_flag(name: &str) -> Option<Vec<color::RGBColor>>
 ```
+
+See the [definition](../src/main.rs#L28).
