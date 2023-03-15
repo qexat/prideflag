@@ -1,11 +1,14 @@
 pub mod color {
     pub type RGBColor = (u8, u8, u8);
 
+    pub const ACE_GREY: RGBColor = (163, 163, 163);
+    pub const ENBY_BLACK: RGBColor = (44, 44, 44);
     pub const PRIDE_RED: RGBColor = (228, 3, 3);
     pub const LESBIAN_SINOPIA: RGBColor = (214, 41, 0);
     pub const PRIDE_ORANGE: RGBColor = (255, 140, 0);
     pub const LESBIAN_ATOMIC_TANGERINE: RGBColor = (255, 155, 85);
     pub const PRIDE_YELLOW: RGBColor = (255, 237, 0);
+    pub const ENBY_YELLOW: RGBColor = (252, 244, 52);
     pub const PRIDE_GREEN: RGBColor = (0, 128, 38);
     pub const GAY_MINT: RGBColor = (152, 232, 193);
     pub const GAY_TURQUOISE: RGBColor = (38, 206, 170);
@@ -16,6 +19,7 @@ pub mod color {
     pub const BISEXUAL_BLUE: RGBColor = (0, 56, 168);
     pub const PRIDE_INDIGO: RGBColor = (36, 64, 142);
     pub const GAY_PURPLE: RGBColor = (61, 26, 120);
+    pub const ENBY_MAUVE: RGBColor = (156, 89, 209);
     pub const BISEXUAL_MAUVE: RGBColor = (155, 79, 150);
     pub const TRANS_AMARANTH_PINK: RGBColor = (247, 168, 184);
     pub const LESBIAN_SUPER_PINK: RGBColor = (212, 97, 166);
