@@ -18,27 +18,22 @@ struct Args {
 
 impl Args {
     fn get_flag_name(self) -> String {
-        match self.flag {
-            Some(v) => v.to_lowercase(),
-            None => DEFAULT_FLAG.to_owned(),
-        }
+        self.flag.unwrap_or(DEFAULT_FLAG.to_owned()).to_lowercase()
     }
 }
 
 fn get_flag(name: &str) -> Option<Vec<color::RGBColor>> {
     let mut full_name: &str = name;
 
-    for (al, n) in flag::NAME_ALIASES.iter() {
-        if al.contains(&name) {
-            full_name = n;
-            break;
-        }
+    if let Some(&n) = flag::NAME_ALIASES
+        .iter()
+        .find(|&(al, _)| al.contains(&name))
+        .map(|(_, n)| n)
+    {
+        full_name = n;
     }
 
-    match flag::FLAGS.get(&full_name) {
-        Some(v) => Some(v.to_vec()),
-        None => None,
-    }
+    flag::FLAGS.get(&full_name).map(|v| v.to_vec())
 }
 
 fn make_esc(r: u8, g: u8, b: u8) -> String {
@@ -46,27 +41,24 @@ fn make_esc(r: u8, g: u8, b: u8) -> String {
 }
 
 fn make_band(r: u8, g: u8, b: u8) -> String {
-    let termsize::Size { rows: _, cols } = termsize::get().unwrap();
+    let termsize::Size { rows: _, cols } = termsize::get().expect("could not fetch terminal size");
     format!("{}{}\x1b[m", make_esc(r, g, b), " ".repeat(cols.into()))
 }
 
 fn make_flag(flag: Vec<color::RGBColor>) -> String {
-    let mut flag_string = String::new();
-    for (r, g, b) in flag {
-        flag_string.extend(format!("{}\n", make_band(r, g, b)).chars());
-    }
-    flag_string
+    flag.iter()
+        .map(|(r, g, b)| make_band(*r, *g, *b))
+        .collect::<Vec<_>>()
+        .join("\n")
 }
 
 fn main() {
     let args = Args::parse();
     let flag_name = args.get_flag_name();
-    let flag = match get_flag(flag_name.as_str()) {
-        Some(v) => v,
-        None => {
-            eprintln!("Error: '{}' is not a valid flag name", flag_name);
-            process::exit(1);
-        }
-    };
+    let flag = get_flag(flag_name.as_str()).unwrap_or_else(|| {
+        eprintln!("Error: '{}' is not a valid flag name", flag_name);
+        process::exit(1);
+    });
+
     print!("{}", make_flag(flag));
 }

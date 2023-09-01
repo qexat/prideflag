@@ -8,4 +8,5 @@ edition = "2021"
 [dependencies]
 clap = { version = "4.1.8", features = ["derive"] }
 lazy_static = "1.4.0"
+maplit = "1.0.2"
 termsize = "0.1.6"
